@@ -13,6 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+/// Timer
+using System.Windows.Threading;
+
 namespace PacManGame
 {
     /// <summary>
@@ -20,9 +23,37 @@ namespace PacManGame
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        DispatcherTimer timer = new DispatcherTimer();
+
+        bool goLeft, goRight, goUp, goDown;
+        bool noLeft, noRight, noUp, noDown;
+
+        int speed = 8;
+
+        int ghostSpeed = 10;
+        int ghostMoveStep = 130;
+        int currentGhostStep;
+        int score = 0;
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void CanvasKeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void GameSetup()
+        {
+
+        }
+
+        private void GameOver()
+        {
+
         }
     }
 }
