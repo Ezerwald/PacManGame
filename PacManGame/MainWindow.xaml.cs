@@ -39,6 +39,8 @@ namespace PacManGame
         public MainWindow()
         {
             InitializeComponent();
+
+            GameSetUp();
         }
 
         private void CanvasKeyDown(object sender, KeyEventArgs e)
@@ -46,7 +48,7 @@ namespace PacManGame
 
         }
 
-        private void GameSetup()
+        private void GameSetUp()
         {
             MyCanvas.Focus();
 
@@ -71,6 +73,11 @@ namespace PacManGame
             pinkGhost.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/pink.jpg"));
             pinkGuy.Fill = pinkGhost;
 
+        }
+
+        private void GameLoop(object sender, EventArgs e)
+        {
+            
         }
 
         private void GameOver()

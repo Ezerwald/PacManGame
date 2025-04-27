@@ -15,7 +15,7 @@
         <Rectangle Name="pacman" Width="30" Height="30" Fill="Yellow" Canvas.Left="129" Canvas.Top="30" HorizontalAlignment="Left" VerticalAlignment="Top" />
         <Rectangle Name="redGuy" Tag="ghost" Width="30" Height="30" Fill="Red" Canvas.Left="278" Canvas.Top="30" />
         <Rectangle Name="orangeGuy" Tag="ghost" Width="30" Height="30" Fill="Orange" Canvas.Left="192" Canvas.Top="45" HorizontalAlignment="Center" VerticalAlignment="Top" />
-        <Rectangle Name="pinkGuy" Tag="ghost" Width="30" Height="30" Fill="Pink" Canvas.Left="192" Canvas.Top="45" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Rectangle Name="pinkGuy" Tag="ghost" Width="30" Height="30" Fill="Pink" Canvas.Left="231" Canvas.Top="30" HorizontalAlignment="Left" VerticalAlignment="Top" />
 
         <!--WALLS-->
         <Rectangle Tag="wall" Stroke="Aqua" StrokeThickness="2" Height="20" Width="600" Canvas.Left="100" Canvas.Top="84" HorizontalAlignment="Left" VerticalAlignment="Center" />
