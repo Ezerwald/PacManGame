@@ -117,8 +117,53 @@ namespace PacManGame
 
         private void GameLoop(object sender, EventArgs e)
         {
-            
+            if (goRight)
+            {
+                Canvas.SetLeft(pacman, Canvas.GetLeft(pacman) + speed);
+            }
+
+            if (goLeft)
+            {
+                Canvas.SetLeft(pacman, Canvas.GetLeft(pacman) - speed);
+            }
+
+            if (goUp)
+            {
+                Canvas.SetTop(pacman, Canvas.GetTop(pacman) - speed);
+            }
+
+            if (goDown)
+            {
+                Canvas.SetTop(pacman, Canvas.GetTop(pacman) + speed);
+            }
+
+
+            /// Add window border collision
+            if (goRight && Canvas.GetLeft(pacman) + 50 > Application.Current.MainWindow.Width) 
+            {
+                noRight = true;
+                goRight = false;
+            }
+
+            if (goLeft && Canvas.GetLeft(pacman) < 9)
+            {
+                noLeft = true;
+                goLeft = false;
+            }
+
+            if (goUp && Canvas.GetTop(pacman) < 7)
+            {
+                noUp = true;
+                goUp = false;
+            }
+
+            if (goDown && Canvas.GetTop(pacman) + 75 > Application.Current.MainWindow.Height)
+            {
+                noDown = true;
+                goDown = false;
+            }
         }
+
 
         private void GameOver(string message)
         {
