@@ -48,6 +48,13 @@ namespace PacManGame
 
         private void GameSetup()
         {
+            MyCanvas.Focus();
+
+            timer.Tick += GameLoop;
+            timer.Interval = TimeSpan.FromMilliseconds(20);
+            timer.Start();
+            currentGhostStep = ghostMoveStep;
+
 
         }
 
