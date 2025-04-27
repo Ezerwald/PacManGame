@@ -152,7 +152,7 @@ namespace PacManGame
             }
 
 
-            /// Add window border collision
+            /// Window border collision
             if (goRight && Canvas.GetLeft(pacman) + 50 > Application.Current.MainWindow.Width) 
             {
                 noRight = true;
@@ -180,7 +180,7 @@ namespace PacManGame
             pacmanHitBox = new Rect(Canvas.GetLeft(pacman), Canvas.GetTop(pacman), pacman.Width, pacman.Height);
 
 
-            /// Add wall collision
+            /// Wall collision
             foreach (var x in MyCanvas.Children.OfType<Rectangle>())
             {
                 Rect hitBox = new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
@@ -216,7 +216,7 @@ namespace PacManGame
                     }
                 }
 
-                /// Add coin collection   
+                /// Coin collection   
                 if ((string)x.Tag == "coin")
                 {
                     if (pacmanHitBox.IntersectsWith(hitBox) && x.Visibility == Visibility.Visible)
@@ -226,8 +226,39 @@ namespace PacManGame
 
                     }
                 }
+
+                /// Ghost collision
+                if ((string)x.Tag == "ghost")
+                {
+                    // check if pac man collides with the ghost 
+                    if (pacmanHitBox.IntersectsWith(hitBox))
+                    {
+                        GameOver("Ghosts got you, click ok to play again!");
+                    }
+
+                    if (x.Name.ToString() == "orangeGuy")
+                    {
+                        Canvas.SetLeft(x, Canvas.GetLeft(x) - ghostSpeed);
+                    }
+                    else
+                    {
+                        Canvas.SetLeft(x, Canvas.GetLeft(x) + ghostSpeed);
+                    }
+
+                    currentGhostStep--;
+
+                    if (currentGhostStep < 1)
+                    {
+                        currentGhostStep = ghostMoveStep;
+                        ghostSpeed = -ghostSpeed;
+                    }
+                }
             }
 
+            if (score == coinCount)
+            {
+                GameOver("You won! You collected all of the coins!");
+            }
 
         }
 
