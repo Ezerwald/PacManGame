@@ -9,11 +9,39 @@
     <Canvas Name ="MyCanvas" KeyDown="CanvasKeyDown" Focusable="True" Background="Black">
 
         <Label FontSize="20" Name="textScore" Foreground="White" Content="Score: 0" />
-        <Rectangle Name="pacman" Width="30" Height="30" Fill="Yellow" Canvas.Left="91" Canvas.Top="130" />
-        <Rectangle Name="redGuy" Tag="ghost" Width="30" Height="30" Fill="Red" Canvas.Left="192" Canvas.Top="130" />
+        <Rectangle Name="pacman" Width="30" Height="30" Fill="Yellow" Canvas.Left="129" Canvas.Top="30" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="redGuy" Tag="ghost" Width="30" Height="30" Fill="Red" Canvas.Left="278" Canvas.Top="30" />
         <Rectangle Name="orangeGuy" Tag="ghost" Width="30" Height="30" Fill="Orange" Canvas.Left="192" Canvas.Top="45" HorizontalAlignment="Center" VerticalAlignment="Top" />
-        <Rectangle Name="pinkGuy" Tag="ghost" Width="30" Height="30" Fill="Pink" Canvas.Left="192" Canvas.Top="215" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Rectangle Name="pinkGuy" Tag="ghost" Width="30" Height="30" Fill="Pink" Canvas.Left="192"Canvas.Left="340" Canvas.Top="215"Canvas.Top="50" HorizontalAlignment="Center"HorizontalAlignment="Left" VerticalAlignment="Top"VerticalAlignment="Top" />
 
-
+        <Rectangle Tag="wall" Stroke="Aqua" StrokeThickness="2" Height="20" Width="600" Canvas.Left="100" Canvas.Top="84" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="wall" Stroke="Aqua" StrokeThickness="2" Height="20" Width="600" Canvas.Left="100" Canvas.Top="484" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Rectangle Tag="wall" Stroke="Aqua" StrokeThickness="2" Height="180" Width="20" Canvas.Left="100" Canvas.Top="324" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Rectangle Tag="wall" Stroke="Aqua" StrokeThickness="2" Height="180" Width="20" Canvas.Left="100" Canvas.Top="84" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Rectangle Tag="wall" Stroke="Aqua" StrokeThickness="2" Height="60" Width="20" Canvas.Left="160" Canvas.Top="144" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Rectangle Tag="wall" Stroke="Aqua" StrokeThickness="2" Height="100" Width="20" Canvas.Left="160" Canvas.Top="244" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Rectangle Tag="wall" Stroke="Aqua" StrokeThickness="2" Height="60" Width="20" Canvas.Left="160" Canvas.Top="384" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Rectangle Tag="wall" Stroke="Aqua" StrokeThickness="2" Height="200" Width="20" Canvas.Left="220" Canvas.Top="144" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Rectangle Tag="wall" Stroke="Aqua" StrokeThickness="2" Height="180" Width="20" Canvas.Left="680" Canvas.Top="84" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="wall" Stroke="Aqua" StrokeThickness="2" Height="180" Width="20" Canvas.Left="680" Canvas.Top="324" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="wall" Stroke="Aqua" StrokeThickness="2" Height="180" Width="20" Canvas.Left="680" Canvas.Top="84" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Rectangle Tag="wall" Stroke="Aqua" StrokeThickness="2" Height="100" Width="20" Canvas.Left="620" Canvas.Top="244" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Rectangle Tag="wall" Stroke="Aqua" StrokeThickness="2" Height="60" Width="20" Canvas.Left="620" Canvas.Top="144" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="wall" Stroke="Aqua" StrokeThickness="2" Height="60" Width="20" Canvas.Left="620" Canvas.Top="384" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Rectangle Tag="wall" Stroke="Aqua" StrokeThickness="2" Height="200" Width="20" Canvas.Left="560" Canvas.Top="144" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Rectangle Tag="wall" Stroke="Aqua" StrokeThickness="2" Height="20" Width="242" Canvas.Left="278" Canvas.Top="144" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="wall" Stroke="Aqua" StrokeThickness="2" Height="20" Width="120" Canvas.Left="340" Canvas.Top="324" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="wall" Stroke="Aqua" StrokeThickness="2" Height="200" Width="20" Canvas.Left="279" Canvas.Top="144" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Rectangle Tag="wall" Stroke="Aqua" StrokeThickness="2" Height="200" Width="20" Canvas.Left="500" Canvas.Top="144" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Rectangle Tag="wall" Stroke="Aqua" StrokeThickness="2" Height="140" Width="20" Canvas.Left="340" Canvas.Top="204" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Rectangle Tag="wall" Stroke="Aqua" StrokeThickness="2" Height="140" Width="20" Canvas.Left="440" Canvas.Top="204" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Rectangle Tag="wall" Stroke="Aqua" StrokeThickness="2" Height="20" Width="220" Canvas.Left="160" Canvas.Top="384" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="wall" Stroke="Aqua" StrokeThickness="2" Height="20" Width="220" Canvas.Left="420" Canvas.Top="384" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="wall" Stroke="Aqua" StrokeThickness="2" Height="60" Width="20" Canvas.Left="220" Canvas.Top="444" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Tag="wall" Stroke="Aqua" StrokeThickness="2" Height="60" Width="20" Canvas.Left="560" Canvas.Top="444" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="wall" Stroke="Aqua" StrokeThickness="2" Height="60" Width="20" Canvas.Left="279" Canvas.Top="384" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Tag="wall" Stroke="Aqua" StrokeThickness="2" Height="60" Width="20" Canvas.Left="340" Canvas.Top="444" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="wall" Stroke="Aqua" StrokeThickness="2" Height="60" Width="20" Canvas.Left="440" Canvas.Top="444" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="wall" Stroke="Aqua" StrokeThickness="2" Height="60" Width="20" Canvas.Left="500" Canvas.Top="384" HorizontalAlignment="Left" VerticalAlignment="Center" />
     </Canvas>
 </Window>
