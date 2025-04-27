@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PacManGame"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Pac Man Game" Height="600" Width="800">
+    <Canvas Name ="MyCanvas" KeyDown="CanvasKeyDown" Focusable="True" Background="Black">
+
+        <Label FontSize="20" Name="textScore" Foreground="White" Content="Score: 0" />
+        <Rectangle Name="pacman" Width="30" Height="30" Fill="Yellow" Canvas.Left="91" Canvas.Top="130" />
+        <Rectangle Name="redGuy" Tag="ghost" Width="30" Height="30" Fill="Red" Canvas.Left="192" Canvas.Top="130" />
+        <Rectangle Name="orangeGuy" Tag="ghost" Width="30" Height="30" Fill="Orange" Canvas.Left="192" Canvas.Top="45" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Rectangle Name="pinkGuy" Tag="ghost" Width="30" Height="30" Fill="Pink" Canvas.Left="192" Canvas.Top="215" HorizontalAlignment="Center" VerticalAlignment="Top" />
+
+
+    </Canvas>
 </Window>
