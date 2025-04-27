@@ -31,6 +31,8 @@ namespace PacManGame
 
         int speed = 8;
 
+        Rect pacmanHitBox;
+
         int ghostSpeed = 10;
         int ghostMoveStep = 130;
         int currentGhostStep;
@@ -162,6 +164,48 @@ namespace PacManGame
                 noDown = true;
                 goDown = false;
             }
+
+            pacmanHitBox = new Rect(Canvas.GetLeft(pacman), Canvas.GetTop(pacman), pacman.Width, pacman.Height);
+
+            foreach (var x in MyCanvas.Children.OfType<Rectangle>())
+            {
+                Rect hitBox = new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
+
+                if ((string)x.Tag == "wall")
+                {
+                    if (goLeft == true && pacmanHitBox.IntersectsWith(hitBox))
+                    {
+                        Canvas.SetLeft(pacman, Canvas.GetLeft(pacman) + 10); // Wall width = 10
+                        noLeft = true;
+                        goLeft = false;
+                    }
+
+                    if (goRight == true && pacmanHitBox.IntersectsWith(hitBox))
+                    {
+                        Canvas.SetLeft(pacman, Canvas.GetLeft(pacman) - 10);
+                        noRight = true;
+                        goRight = false;
+                    }
+
+                    if (goUp == true && pacmanHitBox.IntersectsWith(hitBox))
+                    {
+                        Canvas.SetTop(pacman, Canvas.GetTop(pacman) + 10);
+                        noUp = true;
+                        goUp = false;
+                    }
+
+                    if (goDown == true && pacmanHitBox.IntersectsWith(hitBox))
+                    {
+                        Canvas.SetTop(pacman, Canvas.GetTop(pacman) - 10);
+                        noDown = true;
+                        goDown = false;
+                    }
+                }
+
+
+            }
+
+
         }
 
 
