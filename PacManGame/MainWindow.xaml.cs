@@ -240,6 +240,10 @@ namespace PacManGame
                     {
                         Canvas.SetLeft(x, Canvas.GetLeft(x) - ghostSpeed);
                     }
+                    else if (x.Name.ToString() == "pinkGuy")
+                    {
+                        Canvas.SetTop(x, Canvas.GetTop(x) - 0.6 * ghostSpeed);
+                    }
                     else
                     {
                         Canvas.SetLeft(x, Canvas.GetLeft(x) + ghostSpeed);
