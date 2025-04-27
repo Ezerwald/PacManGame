@@ -80,9 +80,13 @@ namespace PacManGame
             
         }
 
-        private void GameOver()
+        private void GameOver(string message)
         {
+            timer.Stop();
+            MessageBox.Show(message, "The Pac Man Game");
 
+            System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
+            Application.Current.Shutdown();
         }
     }
 }
