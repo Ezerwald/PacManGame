@@ -38,6 +38,8 @@ namespace PacManGame
         int currentGhostStep;
         int score = 0;
 
+        int coinCount = 0;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -115,10 +117,20 @@ namespace PacManGame
             pinkGhost.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/pink.jpg"));
             pinkGuy.Fill = pinkGhost;
 
+            foreach (UIElement element in MyCanvas.Children)
+            {
+                if (element is Shape shape && (string)shape.Tag == "coin")
+                {
+                    coinCount++;
+                }
+            }
         }
 
         private void GameLoop(object sender, EventArgs e)
         {
+
+            txtScore.Content = "Score: " + score;
+
             if (goRight)
             {
                 Canvas.SetLeft(pacman, Canvas.GetLeft(pacman) + speed);
@@ -167,6 +179,8 @@ namespace PacManGame
 
             pacmanHitBox = new Rect(Canvas.GetLeft(pacman), Canvas.GetTop(pacman), pacman.Width, pacman.Height);
 
+
+            /// Add wall collision
             foreach (var x in MyCanvas.Children.OfType<Rectangle>())
             {
                 Rect hitBox = new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
@@ -202,7 +216,16 @@ namespace PacManGame
                     }
                 }
 
+                /// Add coin collection   
+                if ((string)x.Tag == "coin")
+                {
+                    if (pacmanHitBox.IntersectsWith(hitBox) && x.Visibility == Visibility.Visible)
+                    {
+                        x.Visibility = Visibility.Hidden;
+                        score++;
 
+                    }
+                }
             }
 
 
