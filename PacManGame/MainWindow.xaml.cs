@@ -55,6 +55,21 @@ namespace PacManGame
             timer.Start();
             currentGhostStep = ghostMoveStep;
 
+            ImageBrush pacmanImage = new ImageBrush();
+            pacmanImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/pacman.jpg"));
+            pacman.Fill = pacmanImage;
+
+            ImageBrush redGhost = new ImageBrush();
+            redGhost.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/red.jpg"));
+            redGuy.Fill = redGhost;
+
+            ImageBrush orangeGhost = new ImageBrush();
+            orangeGhost.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/orange.jpg"));
+            orangeGuy.Fill = orangeGhost;
+
+            ImageBrush pinkGhost = new ImageBrush();
+            pinkGhost.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/pink.jpg"));
+            pinkGuy.Fill = pinkGhost;
 
         }
 
